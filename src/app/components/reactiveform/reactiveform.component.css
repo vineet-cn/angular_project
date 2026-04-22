@@ -1,0 +1,20 @@
+/* Header green */
+.bs-datepicker-head {
+  background-color: #4CAF50 !important;
+}
+
+/* Selected date */
+.bs-datepicker-body table td span.selected {
+  background-color: #4CAF50 !important;
+}
+
+/* Hover */
+.bs-datepicker-body table td span:hover {
+  background-color: #81C784 !important;
+}
+
+/* Popup shadow like FSSAI */
+.bs-datepicker-container {
+  z-index: 9999 !important;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}

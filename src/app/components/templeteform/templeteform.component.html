@@ -1,0 +1,40 @@
+<div class="w3-row" style="display:flex; justify-content:center;">                                                                                                                                                                                                                                                                                                                                  
+  <!-- From Date -->
+  <div class="w3-half" style="padding: 5px;">
+    <div class="w3-half">
+      <label>From Date</label>
+    </div>
+    <div class="w3-half">
+      <input class="w3-input w3-border w3-center"
+             [(ngModel)]="penaltySearchParam.fromDate"
+             name="fromDate"
+             type="text"
+             placeholder="DD-MM-YYYY"
+             bsDatepicker
+             [bsConfig]="dpConfig"
+             [maxDate]="maxDate"
+             autocomplete="off"
+             onkeydown="return false">
+    </div>
+  </div>
+
+  <!-- To Date -->
+  <div class="w3-half" style="padding: 5px;">
+    <div class="w3-half">
+      <label>To Date</label>
+    </div>
+    <div class="w3-half">
+      <input class="w3-input w3-border w3-center"
+             [(ngModel)]="penaltySearchParam.toDate"
+             name="toDate"
+             type="text"
+             placeholder="DD-MM-YYYY"
+             bsDatepicker
+             [bsConfig]="dpConfig"
+             [maxDate]="maxDate"
+             autocomplete="off"
+             onkeydown="return false">
+    </div>
+  </div>
+
+</div>

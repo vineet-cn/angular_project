@@ -1,0 +1,20 @@
+<p>Post API Form</p>
+
+<form [formGroup]="Studentform" (ngSubmit)="postData()">
+
+  <div>
+    <input type="text" formControlName="name" placeholder="Enter name">
+  </div>
+
+  <div>
+    <input type="text" formControlName="age" placeholder="Enter age">
+  </div>
+
+  <div>
+    <input type="text" formControlName="city" placeholder="Enter city">
+  </div>
+
+  <button type="submit">Submit</button>
+
+</form>
+  <button type="button" (click)="updateData()">Update</button>

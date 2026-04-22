@@ -1,0 +1,49 @@
+<p>Reactive Form Works!</p>
+
+<form [formGroup]="StudentForm" (ngSubmit)="onSave()">
+
+  <!-- NAME -->
+  <div>
+    <input type="text" formControlName="name" placeholder="Enter name">
+
+    <div *ngIf="StudentForm.get('name').touched && StudentForm.get('name').errors?.required">
+      Name required
+    </div>
+
+    <div *ngIf="StudentForm.get('name').touched && StudentForm.get('name').errors?.minlength">
+      Minimum 2 characters
+    </div>
+  </div>
+
+  <!-- AGE -->
+  <input type="text" formControlName="age" placeholder="Enter age"><br>
+
+  <!-- CITY -->
+  <input type="text" formControlName="city" placeholder="Enter city"><br>
+
+  <!-- DOB -->
+  <div>
+    <label>DOB</label>
+  
+
+  <input 
+    type="text"
+    class="form-control"
+    placeholder="From Date (dd/mm/yyyy)"
+    bsDatepicker
+    formControlName="fromDate"
+    [bsConfig]="bsConfig">
+
+</div>
+
+  <!-- SUBMIT -->
+  <button type="submit" [disabled]="StudentForm.invalid">Submit</button>
+
+</form>
+
+<!-- BUTTONS -->
+<button (click)="setData()">Set Value</button>
+<button (click)="patchData()">Patch Value</button>
+
+<!-- OUTPUT -->
+<pre>{{formValue | json}}</pre>
